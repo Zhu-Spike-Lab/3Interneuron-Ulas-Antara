@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 import snntorch as snn
 from classes.helper1 import conn_mx, hid_mx3I
-from classes.RLIF1 import RLIF1
+from torch import RLIF
 import numpy as np
 
 

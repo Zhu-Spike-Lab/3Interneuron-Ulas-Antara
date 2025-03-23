@@ -7,7 +7,15 @@ import matplotlib.pyplot as plt
 from classes.ATanSurrogate1 import ATanSurrogate1
 
 
+
 '''all helper functions that we need'''
+
+def sparsity(nested_list):
+    # give python list, will return ratio of 0s. 
+    zero_count = sum(sublist.count(0) for sublist in nested_list)  # Count all zeros
+    total_count = sum(len(sublist) for sublist in nested_list)  # Count all elements
+
+    return zero_count / total_count if total_count > 0 else 0  # Avoid division by zero
 
 #creates a weight matrix given sparsity with log-normal distribution of values
 def conn_mx(rows, columns, sparsity):
